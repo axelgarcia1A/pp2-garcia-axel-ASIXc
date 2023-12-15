@@ -14,10 +14,14 @@ for columnas in range(0,7):
     for filas in range(0,7):
         print(0*7,end=' ')
         for x in range (posicion1,posicion2):
-            print(1)
+            print('1')
             posicion1 += 1
         for i in range (posicion2,posicion1):
-            print(2)
+            print('2', end=' ')
             posicion2 -= 1
     print()
 
+'''
+Mi idea (no funcional) era que con el posicion 1 y el 2 limitar el por donde iban los 1 y 2,
+y pues ir restando/sumando 1 para que avanzasen en la siguiente linea (spoiler: no funciona).
+'''
