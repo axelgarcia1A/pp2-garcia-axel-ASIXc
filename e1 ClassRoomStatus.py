@@ -5,14 +5,39 @@ Data: 15/12/2023
 Descripció:
 Calcular notes sense dewcimals d'11 alumnes i sapiguer si són suspesos o aprobats.
 """
-nota= input().split(' ')
-aprobat = []
-suspes = []
 
-for x in range(0,11):
-    if nota == 5 or nota == 6 or nota == 7 or nota == 8 or nota == 9 or nota == 10:
-        aprobat += nota
-        print(aprobat)
-    elif nota == 4 or nota == 3 or nota == 2 or nota == 1 or nota == 0:
-        suspes += nota
-        print(suspes)
+#Començament
+notas = input().split(' ')
+aprobado = []
+suspendido = []
+
+#Variables necessaries per fer tot.
+ap = 0
+sup = 0
+no = 0
+x = 0
+
+#Bucle
+try:
+    for nota in notas:
+        nota = int(nota)
+        no +=1
+        if no <= 11:
+            if 5 <= nota <= 10:
+                aprobado += [nota]
+                ap += 1
+            elif 0 <= nota <= 4:
+                suspendido += [nota]
+                sup += 1
+        else:
+            print('Demasiados alumnos')
+except:
+    print('Valor/es no valido')
+
+#Resultat final
+print(': ( Supesos:',sup)
+print(suspendido)
+print(': ) Aprovats:',ap)
+print(aprobado)
+
+
