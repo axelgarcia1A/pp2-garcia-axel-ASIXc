@@ -14,10 +14,10 @@ for columnas in range(0,7):
     for filas in range(0,7):
         print(0*7,end=' ')
     for x in range (posicion1,posicion2):
-        print('1', end=' ')
+        print('1')
         posicion1 += 1
     for i in range (posicion2,posicion1):
-        print('2', end=' ')
+        print('2')
         posicion2 -= 1
     print()
 
